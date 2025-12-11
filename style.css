@@ -1,130 +1,290 @@
 /* Genel Ayarlar ve Reset */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0d1117; /* Koyu tema */
-    color: #f0f6fc;
+    background-color: #0c1015; /* Çok Koyu Arka Plan */
+    color: #e5e5e5;
+    line-height: 1.6;
 }
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 0 15px;
 }
-
-/* Header ve Hero Bölümü */
-.hero-section {
-    background-color: #161b22;
-    padding: 80px 0;
-    text-align: center;
-}
-.hero-section h1 {
+.section-title {
     font-size: 2.5em;
-    color: #58a6ff; /* Mavi vurgu */
-    margin-bottom: 5px;
-}
-.hero-section h2 {
-    font-size: 1.5em;
-    font-weight: 400;
-    margin-bottom: 40px;
+    text-align: center;
+    color: #4CAF50; /* Yeşil Vurgu */
+    margin-bottom: 50px;
+    font-weight: 700;
 }
 
-/* Oyun Vitrini */
-.game-showcase {
-    background-color: #0d1117;
-    border: 1px solid #30363d;
-    padding: 30px;
-    border-radius: 10px;
-    display: inline-block;
-    max-width: 400px;
-    margin-top: 20px;
+/* Navigasyon */
+.navbar {
+    background-color: #1a1e24; /* Header Arka Planı */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-.game-icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 15px;
-    margin-bottom: 15px;
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.game-showcase h3 {
-    margin-top: 0;
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: 700;
     color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
 }
-.game-showcase p {
-    color: #c9d1d9;
+.digital-text {
+    color: #4CAF50;
+    font-weight: 400;
+}
+.nav-links a:not(.btn) {
+    color: #a8b3bf;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+.nav-links a:hover:not(.btn) {
+    color: #4CAF50;
 }
 
-/* Butonlar */
-.download-links a {
+/* Buton Stilleri */
+.btn {
     text-decoration: none;
-    margin: 0 10px;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 600;
-    display: inline-block;
-    margin-top: 15px;
-    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
 }
 .primary-btn {
-    background-color: #238636; /* Yeşil (Play Store) */
+    background-color: #4CAF50;
     color: white;
+    border: none;
+    margin-left: 30px;
 }
 .primary-btn:hover {
-    background-color: #2ea043;
+    background-color: #43a047;
+    transform: translateY(-1px);
 }
-.secondary-btn {
-    background-color: #0a4f8f; /* Mavi (App Store) */
+.play-btn {
+    background-color: #58a6ff; /* Mavi Vurgu */
     color: white;
+    font-size: 1.1em;
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin-top: 20px;
 }
-.secondary-btn:hover {
-    background-color: #1f6fb6;
+.play-btn i {
+    margin-right: 10px;
+}
+.play-btn:hover {
+    background-color: #4690e8;
 }
 
-/* Hakkımızda Bölümü */
-.about-section {
-    padding: 60px 0;
-    border-top: 1px solid #30363d;
+/* Hero Section (Arka Plan ve Konumlandırma) */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('placeholder_dark_bg.jpg') no-repeat center center/cover; /* Arka plan görseli */
+    color: white;
+    overflow: hidden;
 }
-.about-section h2 {
-    color: #58a6ff;
-    text-align: center;
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Hafif karartma */
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+.hero-text-area {
+    max-width: 50%;
+}
+.hero-text-area h2 {
+    font-size: 1.5em;
+    color: #4CAF50;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.main-title {
+    font-size: 3.5em;
+    margin-top: 0;
     margin-bottom: 20px;
 }
-.about-section p {
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+.hero-image {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease;
+}
+
+/* Oyun Portföyü (Kart Stilleri) */
+.portfolio-section {
+    padding: 80px 0;
+}
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+.game-card {
+    background-color: #1a1e24;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    border: 1px solid #30363d;
+}
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+.featured-game {
+    grid-column: span 1; /* Tek sütun kaplamasını sağlar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: left;
+}
+.game-icon {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.card-body {
+    padding: 10px;
+    width: 100%;
+}
+.card-links a {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+.card-links a:hover {
+    color: #fff;
+}
+.link-btn-small {
+    display: inline-block;
+    background-color: #30363d;
+    color: #4CAF50;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+.link-btn-small:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Politikalar Bölümü */
+.policies-section {
+    padding: 60px 0;
+    background-color: #161b22;
+}
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.policy-card {
+    background-color: #1a1e24;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+    transition: border-color 0.3s;
+}
+.policy-card:hover {
+    border-color: #4CAF50;
+}
+.policy-card h4 {
+    color: #fff;
+    font-size: 1.3em;
+    margin-top: 0;
+}
+.policy-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-top: 15px;
 }
 
 /* Footer */
 .footer-section {
-    background-color: #161b22;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #0c1015;
+    padding: 30px 0;
     border-top: 1px solid #30363d;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.9em;
 }
-.footer-links a {
-    color: #58a6ff;
-    text-decoration: none;
-    margin: 0 15px;
+.social-links a {
+    color: #a8b3bf;
+    font-size: 1.4em;
+    margin-left: 20px;
+    transition: color 0.3s;
 }
-.footer-links a:hover {
-    text-decoration: underline;
+.social-links a:hover {
+    color: #4CAF50;
 }
 
 /* Mobil Uyumluluk */
-@media (max-width: 600px) {
-    .hero-section h1 {
-        font-size: 2em;
+@media (max-width: 900px) {
+    .nav-links {
+        display: none; /* Mobilde navigasyon menüsü gizlenir */
     }
-    .hero-section h2 {
-        font-size: 1.2em;
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
     }
-    .download-links a {
-        display: block;
-        width: 80%;
-        margin: 10px auto;
+    .hero-text-area {
+        max-width: 100%;
+        text-align: center;
+    }
+    .main-title {
+        font-size: 2.5em;
+    }
+    .hero-image {
+        margin-bottom: 30px;
     }
 }
