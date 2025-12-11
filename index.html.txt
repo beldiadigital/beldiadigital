@@ -3,40 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BelDia Digital | Mobil Oyun Geliştiricisi</title>
+    <title>BelDia Digital | Mobil Oyun Stüdyosu</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="description" content="BelDia Digital: Hain Kim - Impostor Game ve diğer mobil oyunların geliştiricisi. Eğlenceli ve dinamik mobil deneyimler yaratıyoruz.">
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">BelDia Digital</a>
+            <div class="nav-links">
+                <a href="#games">Oyunlar</a>
+                <a href="#about">Hakkımızda</a>
+                <a href="mailto:kurumsal@beldiadigital.com">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
     <header class="hero-section">
         <div class="container">
-            <h1>BelDia Digital</h1>
-            <h2>Mobil Eğlenceyi Yeniden Tanımlıyoruz</h2>
+            <h1>Mobil Eğlenceyi Yeniden Tanımlıyoruz</h1>
+            <p class="subtitle">Basit, bağımlılık yapıcı ve unutulmaz mobil deneyimler yaratıyoruz.</p>
+            
             <div class="game-showcase">
-                <img src="placeholder_game_icon.png" alt="Hain Kim - Impostor Game" class="game-icon">
-                <h3>Hain Kim - Impostor Game</h3>
-                <p>Milyonlarca oyuncunun kalbini fetheden sosyal çıkarım oyunu.</p>
-                <div class="download-links">
-                    <a href="MAĞAZA_LINK_PLAY_STORE" target="_blank" class="btn primary-btn">Google Play'den İndir</a>
-                    <a href="MAĞAZA_LINK_APP_STORE" target="_blank" class="btn secondary-btn">App Store'dan İndir</a>
+                <div class="game-info">
+                    <h2>Hain Kim - Impostor Game</h2>
+                    <p>Milyonlarca oyuncunun kalbini fetheden sosyal çıkarım oyunu. Arkadaşlarınızı toplayın ve haini bulun!</p>
+                    <div class="download-links">
+                        <a href="MAĞAZA_LINK_PLAY_STORE" target="_blank" class="btn primary-btn"><i class="fab fa-google-play"></i> Google Play</a>
+                        <a href="MAĞAZA_LINK_APP_STORE" target="_blank" class="btn secondary-btn"><i class="fab fa-apple"></i> App Store</a>
+                    </div>
                 </div>
+                <img src="placeholder_game_art.png" alt="Hain Kim - Impostor Game" class="game-art">
             </div>
         </div>
     </header>
 
-    <section class="about-section container">
-        <h2>Kimdir BelDia Digital?</h2>
-        <p>Küçük bir ekiple büyük işler başarmayı hedefleyen bir mobil oyun stüdyosuyuz. Önceliğimiz, oyunculara basit, bağımlılık yapıcı ve unutulmaz deneyimler sunmaktır. Teknolojiye olan tutkumuz ve yaratıcılığımızla, mobil dünyada fark yaratıyoruz.</p>
+    <section id="games" class="portfolio-section container">
+        <h2>Diğer Oyunlarımız</h2>
+        <div class="game-grid">
+            <div class="game-card">
+                <img src="placeholder_game2_icon.png" alt="Oyun 2" class="card-icon">
+                <h4>Sonsuz Koşu Macerası</h4>
+                <a href="#" target="_blank" class="link-btn">İndir <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="game-card">
+                <img src="placeholder_game3_icon.png" alt="Oyun 3" class="card-icon">
+                <h4>Blok Bulmaca 3D</h4>
+                <a href="#" target="_blank" class="link-btn">İndir <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="game-card">
+                <img src="placeholder_game4_icon.png" alt="Oyun 4" class="card-icon">
+                <h4>Kelime Avcısı</h4>
+                <a href="#" target="_blank" class="link-btn">İndir <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="values-section">
+        <div class="container">
+            <h2>Vizyonumuz ve Değerlerimiz</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-heartbeat fa-2x"></i>
+                    <h4>Bağımlılık Yapıcı Eğlence</h4>
+                    <p>Her yaştan kullanıcıya hitap eden basit ama sürükleyici mekanikler.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users fa-2x"></i>
+                    <h4>Topluluk Odaklılık</h4>
+                    <p>Oyuncularımızı dinler, geri bildirimlerine göre oyunlarımızı geliştiririz.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-lightbulb fa-2x"></i>
+                    <h4>Yaratıcı Çözümler</h4>
+                    <p>Mobil teknolojinin sınırlarını zorlayan yenilikçi oyun fikirleri.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer class="footer-section">
         <div class="container">
-            <p>&copy; 2025 BelDia Digital. Tüm hakları saklıdır.</p>
-            <div class="footer-links">
-                <a href="#Hain Kim Oyununun Gizlilik Politikası Linki">Gizlilik Politikası</a>
-                <a href="mailto:kurumsal@beldiadigital.com">İletişim</a>
+            <div class="footer-content">
+                <p>&copy; 2025 BelDia Digital. Tüm hakları saklıdır.</p>
+                <div class="footer-links">
+                    <a href="#app-ads.txt" target="_blank">app-ads.txt</a> <a href="#Gizlilik_Politikası_Linkiniz">Gizlilik Politikası</a>
+                    <a href="mailto:kurumsal@beldiadigital.com">İletişim</a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
             </div>
         </div>
     </footer>
