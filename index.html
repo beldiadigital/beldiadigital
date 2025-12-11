@@ -1,163 +1,135 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BelDia — Oyun Vitrini</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BelDia Digital - Modern Teknoloji ve Oyun</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <meta name="description" content="Modern oyun vitrini - dark UI örneği." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0c0f1a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(20, 25, 40, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1920&q=80') center/cover;
+      padding: 140px 0;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .card-dark {
+      background: #131722;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .game-card img {
+      border-radius: 10px;
+    }
+    .sidebar {
+      background: #131722;
+      border-radius: 16px;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-  <a class="skip" href="#main">Ana içeriğe atla</a>
 
-  <!-- NAV -->
-  <header class="nav" role="banner">
-    <div class="nav-inner">
-      <div class="brand" aria-label="BelDia Digital">
-        <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00aaff"/><stop offset="1" stop-color="#6a4cff"/></linearGradient></defs><rect width="48" height="48" rx="10" fill="url(#g)"/><text x="50%" y="58%" text-anchor="middle" font-size="22" font-family="Inter" fill="#fff" font-weight="700">B</text></svg>
-        <span class="brand-text">BelDia Digital</span>
+<header class="py-3 shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h3 class="fw-bold">BelDia Digital</h3>
+    <nav class="d-flex gap-4">
+      <a href="#" class="text-white text-decoration-none">Ana Sayfa</a>
+      <a href="#" class="text-white text-decoration-none">Hakkımızda</a>
+      <a href="#" class="text-white text-decoration-none">Oyunlar</a>
+      <a href="#" class="text-white text-decoration-none">İletişim</a>
+    </nav>
+    <button class="btn btn-primary rounded-pill px-4">Geliştirici Paneli</button>
+  </div>
+</header>
+
+<section class="hero text-center text-white">
+  <div class="container hero-content">
+    <h1 class="display-5 fw-bold">Mobil Eğlencenin Yeni Çağı</h1>
+    <p class="lead mt-3">Teknoloji ile güçlendirilmiş mobil oyun deneyimini yeniden tanımlıyoruz.</p>
+    <button class="btn btn-light btn-lg mt-4 fw-semibold px-5">Oyunlarımızı Keşfet</button>
+  </div>
+</section>
+
+<div class="container my-5">
+  <div class="row g-4">
+
+    <div class="col-lg-8">
+
+      <div class="card-dark mb-4">
+        <h4 class="fw-bold mb-3">Öne Çıkan Oyun</h4>
+        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1200&q=80" class="w-100" />
       </div>
 
-      <nav class="links" role="navigation" aria-label="Ana menü">
-        <a href="#">About</a>
-        <a href="#">Games</a>
-        <a href="#">Series</a>
-        <a href="#">Creators</a>
-      </nav>
-
-      <div class="actions">
-        <button class="btn ghost">Giriş</button>
-        <button class="btn primary">Kayıt Ol</button>
-        <button class="hamburger" aria-expanded="false" aria-label="Menüyü aç">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" id="hero" aria-labelledby="hero-title">
-    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1542751371-29b0f74f9713?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder');"></div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-      <h1 id="hero-title">Mobil Eğlencenin Yeni Çağı</h1>
-      <p class="lead">Kusursuz vitrin, detaylı oyun sayfaları ve modern kullanıcı deneyimi.</p>
-      <div class="hero-cta">
-        <button class="btn btn-lg primary" id="discoverBtn">Oyunları İncele</button>
-        <button class="btn btn-lg outline" id="watchBtn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">Tanıtımı İzle</button>
-      </div>
-    </div>
-  </section>
-
-  <main id="main">
-    <div class="wrapper">
-
-      <!-- Featured + mini cards -->
-      <section class="featured-section" aria-label="Öne çıkan">
-        <article class="featured-card">
-          <div class="media">
-            <img data-src="https://i.imgur.com/RhRkQzP.png" alt="Deybrohale Yeriguden kapak" class="cover lazy">
-            <button class="play-floating" aria-label="Oynat">▶</button>
-          </div>
-
-          <div class="meta">
-            <h2>Deybrohale Yeriguden</h2>
-            <p class="muted">Aksiyon · Macera · Tek oyuncu</p>
-            <div class="tags">
-              <span class="tag">Editor's Pick</span>
-              <span class="tag">Yeni</span>
-            </div>
-          </div>
-        </article>
-
-        <aside class="mini-gallery" aria-label="Öne çıkan küçük oyunlar">
-          <h3>Küçük Öne Çıkanlar</h3>
-          <ul class="mini-list">
-            <li><img data-src="https://i.imgur.com/fbVs8cP.png" alt="Oyun 1" class="lazy"><span>Zumnas</span></li>
-            <li><img data-src="https://i.imgur.com/WM6iAQo.png" alt="Oyun 2" class="lazy"><span>Trukis</span></li>
-            <li><img data-src="https://i.imgur.com/r1MEyaT.png" alt="Oyun 3" class="lazy"><span>Beast</span></li>
-            <li><img data-src="https://i.imgur.com/TxMZ9BA.png" alt="Oyun 4" class="lazy"><span>Gems</span></li>
-          </ul>
-        </aside>
-      </section>
-
-      <!-- Details panel -->
-      <section class="detail-panel">
-        <article class="card big">
-          <header><h3>Oyun Detail Sayfaları</h3></header>
-          <p>Gelişmiş açıklama alanı, oynanış detayları, ekran görüntüleri ve oyuncu yorumları. Bu alan kart tasarımına örnektir ve responsive olarak alt alta inip düzenini korur.</p>
-          <div class="card-actions">
-            <button class="btn primary">İncele</button>
-            <button class="btn outline">Demo Oyna</button>
-          </div>
-        </article>
-
-        <aside class="side-cards">
-          <div class="card small">
-            <h4>About</h4>
-            <p class="muted">Eleştirmenlerin görüşü, kısa profil ve roller.</p>
-          </div>
-
-          <div class="card small">
-            <h4>Kategoriler</h4>
-            <ul>
-              <li>Action</li>
-              <li>Adventure</li>
-              <li>Strategy</li>
-            </ul>
-          </div>
-        </aside>
-      </section>
-
-      <!-- Grid info -->
-      <section class="info-grid" aria-label="Bilgiler">
-        <div class="info">
-          <h4>Redelorian</h4>
-          <p class="muted">Kısa açıklama ve metrikler burada yer alır.</p>
+      <div class="card-dark mb-4">
+        <h4 class="fw-bold mb-3">Popüler Oyunlar</h4>
+        <div class="row g-3">
+          <div class="col-md-3 game-card"><img src="https://placehold.co/300x300" class="w-100" /></div>
+          <div class="col-md-3 game-card"><img src="https://placehold.co/300x300" class="w-100" /></div>
+          <div class="col-md-3 game-card"><img src="https://placehold.co/300x300" class="w-100" /></div>
+          <div class="col-md-3 game-card"><img src="https://placehold.co/300x300" class="w-100" /></div>
         </div>
-
-        <div class="info">
-          <h4>Inableden</h4>
-          <p class="muted">Sunucu durumu, güncellemeler ve duyurular.</p>
-        </div>
-
-        <div class="info">
-          <h4>Inhalodrem</h4>
-          <p class="muted">Topluluk tavsiyeleri ve rehberler.</p>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="wrapper">
-      <div class="foot-left">
-        <strong>BelDia Digital</strong>
-        <p class="muted">© <span id="year"></span> Tüm hakları saklıdır.</p>
       </div>
 
-      <div class="foot-right">
-        <nav>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Contact</a>
-        </nav>
+      <div class="card-dark">
+        <h4 class="fw-bold mb-2">Oyun Detayları</h4>
+        <p>En iyi mobil oyun deneyimini sunmak için ileri seviye grafikler, yapay zeka destekli oyun motoru ve kullanıcı odaklı arayüz tasarımları kullanıyoruz.</p>
+        <button class="btn btn-primary mt-2">Daha Fazla</button>
       </div>
-    </div>
-  </footer>
 
-  <!-- VIDEO MODAL -->
-  <div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-inner" role="document">
-      <button class="modal-close" aria-label="Kapat">✕</button>
-      <div class="video-wrap" id="videoWrap"></div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="sidebar mb-4">
+        <h5>Hakkımızda</h5>
+        <p>BelDia Digital, modern teknoloji ile geliştirilen premium mobil oyun deneyimleri sunar.</p>
+      </div>
+
+      <div class="sidebar mb-4">
+        <h5>Son Haberler</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">• Yeni oyunumuz yakında yayında!</li>
+          <li class="mb-2">• Grafik motorumuz güncellendi.</li>
+          <li>• Oyuncular için yeni ödül sistemi aktif.</li>
+        </ul>
+      </div>
+
+      <div class="sidebar">
+        <h5>İletişim</h5>
+        <p>E‑posta: destek@beldia.com</p>
+        <p>Discord: BelDia Community</p>
+      </div>
     </div>
   </div>
+</div>
 
-  <script src="script.js" defer></script>
+<footer class="text-center py-4 border-top border-secondary mt-5">
+  © 2025 BelDia Digital — Tüm Hakları Saklıdır.
+</footer>
+
 </body>
 </html>
