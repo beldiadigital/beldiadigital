@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BelDia Digital | Mobil Oyun Geliştiricisi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="BelDia Digital: Hain Kim - Impostor Game ve diğer mobil oyunların geliştiricisi. Eğlenceli ve dinamik mobil deneyimler yaratıyoruz.">
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1>BelDia Digital</h1>
+            <h2>Mobil Eğlenceyi Yeniden Tanımlıyoruz</h2>
+            <div class="game-showcase">
+                <img src="placeholder_game_icon.png" alt="Hain Kim - Impostor Game" class="game-icon">
+                <h3>Hain Kim - Impostor Game</h3>
+                <p>Milyonlarca oyuncunun kalbini fetheden sosyal çıkarım oyunu.</p>
+                <div class="download-links">
+                    <a href="MAĞAZA_LINK_PLAY_STORE" target="_blank" class="btn primary-btn">Google Play'den İndir</a>
+                    <a href="MAĞAZA_LINK_APP_STORE" target="_blank" class="btn secondary-btn">App Store'dan İndir</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section container">
+        <h2>Kimdir BelDia Digital?</h2>
+        <p>Küçük bir ekiple büyük işler başarmayı hedefleyen bir mobil oyun stüdyosuyuz. Önceliğimiz, oyunculara basit, bağımlılık yapıcı ve unutulmaz deneyimler sunmaktır. Teknolojiye olan tutkumuz ve yaratıcılığımızla, mobil dünyada fark yaratıyoruz.</p>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <p>&copy; 2025 BelDia Digital. Tüm hakları saklıdır.</p>
+            <div class="footer-links">
+                <a href="#Hain Kim Oyununun Gizlilik Politikası Linki">Gizlilik Politikası</a>
+                <a href="mailto:kurumsal@beldiadigital.com">İletişim</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
