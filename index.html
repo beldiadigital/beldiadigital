@@ -1,112 +1,163 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BelDia Digital</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BelDia — Oyun Vitrini</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Modern oyun vitrini - dark UI örneği." />
 </head>
-
 <body>
+  <a class="skip" href="#main">Ana içeriğe atla</a>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <div class="logo">
-        <img src="logo.png" alt="">
-        <span>BelDia Digital</span>
-    </div>
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <div class="brand" aria-label="BelDia Digital">
+        <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00aaff"/><stop offset="1" stop-color="#6a4cff"/></linearGradient></defs><rect width="48" height="48" rx="10" fill="url(#g)"/><text x="50%" y="58%" text-anchor="middle" font-size="22" font-family="Inter" fill="#fff" font-weight="700">B</text></svg>
+        <span class="brand-text">BelDia Digital</span>
+      </div>
 
-    <nav>
+      <nav class="links" role="navigation" aria-label="Ana menü">
         <a href="#">About</a>
         <a href="#">Games</a>
         <a href="#">Series</a>
         <a href="#">Creators</a>
-    </nav>
+      </nav>
 
-    <button class="login-btn">Kayıt / Giriş</button>
-</header>
-
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Mobil Eğlencenin Yeni Çağı</h1>
-        <p>Vizyon edin eğlencene tinin erenad teroril ratigi.</p>
-        <button class="cta">Oyunları İncele</button>
+      <div class="actions">
+        <button class="btn ghost">Giriş</button>
+        <button class="btn primary">Kayıt Ol</button>
+        <button class="hamburger" aria-expanded="false" aria-label="Menüyü aç">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1542751371-29b0f74f9713?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder');"></div>
     <div class="hero-overlay"></div>
-</section>
 
+    <div class="hero-content">
+      <h1 id="hero-title">Mobil Eğlencenin Yeni Çağı</h1>
+      <p class="lead">Kusursuz vitrin, detaylı oyun sayfaları ve modern kullanıcı deneyimi.</p>
+      <div class="hero-cta">
+        <button class="btn btn-lg primary" id="discoverBtn">Oyunları İncele</button>
+        <button class="btn btn-lg outline" id="watchBtn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">Tanıtımı İzle</button>
+      </div>
+    </div>
+  </section>
 
-<!-- CONTENT WRAP -->
-<div class="container">
+  <main id="main">
+    <div class="wrapper">
 
-    <!-- BÜYÜK VİTRİN -->
-    <section class="featured">
-        <div class="video-card">
-            <img src="https://i.imgur.com/RhRkQzP.png" alt="">
-            <div class="play-btn">▶</div>
-            <h3>Deybrohale Yeriguden</h3>
-        </div>
+      <!-- Featured + mini cards -->
+      <section class="featured-section" aria-label="Öne çıkan">
+        <article class="featured-card">
+          <div class="media">
+            <img data-src="https://i.imgur.com/RhRkQzP.png" alt="Deybrohale Yeriguden kapak" class="cover lazy">
+            <button class="play-floating" aria-label="Oynat">▶</button>
+          </div>
 
-        <div class="mini-cards">
-            <h3>Oyun Detail Sayfaları</h3>
-            <div class="mini-list">
-                <img src="https://i.imgur.com/fbVs8cP.png">
-                <img src="https://i.imgur.com/WM6iAQo.png">
-                <img src="https://i.imgur.com/r1MEyaT.png">
-                <img src="https://i.imgur.com/TxMZ9BA.png">
+          <div class="meta">
+            <h2>Deybrohale Yeriguden</h2>
+            <p class="muted">Aksiyon · Macera · Tek oyuncu</p>
+            <div class="tags">
+              <span class="tag">Editor's Pick</span>
+              <span class="tag">Yeni</span>
             </div>
-        </div>
-    </section>
+          </div>
+        </article>
 
+        <aside class="mini-gallery" aria-label="Öne çıkan küçük oyunlar">
+          <h3>Küçük Öne Çıkanlar</h3>
+          <ul class="mini-list">
+            <li><img data-src="https://i.imgur.com/fbVs8cP.png" alt="Oyun 1" class="lazy"><span>Zumnas</span></li>
+            <li><img data-src="https://i.imgur.com/WM6iAQo.png" alt="Oyun 2" class="lazy"><span>Trukis</span></li>
+            <li><img data-src="https://i.imgur.com/r1MEyaT.png" alt="Oyun 3" class="lazy"><span>Beast</span></li>
+            <li><img data-src="https://i.imgur.com/TxMZ9BA.png" alt="Oyun 4" class="lazy"><span>Gems</span></li>
+          </ul>
+        </aside>
+      </section>
 
-    <!-- BÜYÜK KART AÇIKLAMASI -->
-    <section class="big-text-box">
-        <h3>Oyun Setail Sayfaları</h3>
-        <p>
-            Vax de dior elser arayise gecen sene golograte sides sciolo-sea 
-            sempo ex doleo cleros aut demtos. Oyun detail scetes dectrimo 
-            denos getrae. Döbtra elit cotes dicerat deranios citara belsetra.
-        </p>
-        <button class="cta-small">İncele</button>
-    </section>
+      <!-- Details panel -->
+      <section class="detail-panel">
+        <article class="card big">
+          <header><h3>Oyun Detail Sayfaları</h3></header>
+          <p>Gelişmiş açıklama alanı, oynanış detayları, ekran görüntüleri ve oyuncu yorumları. Bu alan kart tasarımına örnektir ve responsive olarak alt alta inip düzenini korur.</p>
+          <div class="card-actions">
+            <button class="btn primary">İncele</button>
+            <button class="btn outline">Demo Oyna</button>
+          </div>
+        </article>
 
+        <aside class="side-cards">
+          <div class="card small">
+            <h4>About</h4>
+            <p class="muted">Eleştirmenlerin görüşü, kısa profil ve roller.</p>
+          </div>
 
-    <!-- ALT KUTULAR -->
-    <section class="grid-info">
-        <div class="info-box">
-            <h4>Redelorian</h4>
+          <div class="card small">
+            <h4>Kategoriler</h4>
             <ul>
-                <li>Gylans Pasiti</li>
-                <li>Asetherty Themed</li>
-                <li>Oran denos dicer</li>
+              <li>Action</li>
+              <li>Adventure</li>
+              <li>Strategy</li>
             </ul>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Grid info -->
+      <section class="info-grid" aria-label="Bilgiler">
+        <div class="info">
+          <h4>Redelorian</h4>
+          <p class="muted">Kısa açıklama ve metrikler burada yer alır.</p>
         </div>
 
-        <div class="info-box">
-            <h4>Inableden</h4>
-            <ul>
-                <li>Gylans Rolita Rewna Semi</li>
-                <li>Asethirty find remo</li>
-                <li>Sempos deris retano</li>
-            </ul>
+        <div class="info">
+          <h4>Inableden</h4>
+          <p class="muted">Sunucu durumu, güncellemeler ve duyurular.</p>
         </div>
 
-        <div class="info-box">
-            <h4>Inhalodrem</h4>
-            <ul>
-                <li>Grysita Posicia Iktinavo Sapi</li>
-                <li>Deretanym asined</li>
-                <li>Seraton delist remos</li>
-            </ul>
+        <div class="info">
+          <h4>Inhalodrem</h4>
+          <p class="muted">Topluluk tavsiyeleri ve rehberler.</p>
         </div>
-    </section>
+      </section>
 
-</div>
+    </div>
+  </main>
 
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrapper">
+      <div class="foot-left">
+        <strong>BelDia Digital</strong>
+        <p class="muted">© <span id="year"></span> Tüm hakları saklıdır.</p>
+      </div>
+
+      <div class="foot-right">
+        <nav>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VIDEO MODAL -->
+  <div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-inner" role="document">
+      <button class="modal-close" aria-label="Kapat">✕</button>
+      <div class="video-wrap" id="videoWrap"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
