@@ -3,36 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beldia Digital | Mobile Experience Design</title>
+    <title>Beldia Digital | Engineering & Development Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #3b82f6; --secondary: #8b5cf6; --bg: #050505; }
+        :root { --primary: #3b82f6; --bg: #050505; }
         body { background-color: var(--bg); color: #fff; font-family: 'Sora', sans-serif; overflow-x: hidden; }
-        
-        /* Animasyonlu Arka Plan */
-        .bg-glow {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
-            z-index: -1; pointer-events: none;
-        }
-
+        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%); z-index: -1; pointer-events: none; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .text-gradient { background: linear-gradient(135deg, #fff 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        .card-hover:hover {
-            border-color: var(--primary);
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
-            transform: translateY(-5px);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
-        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+        .card-hover:hover { border-color: var(--primary); box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); transform: translateY(-5px); }
+        .privacy-link:hover { text-decoration: underline; color: #3b82f6; }
     </style>
 </head>
 <body>
@@ -40,142 +23,146 @@
 
     <nav class="fixed w-full z-[100] px-6 py-6 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto flex justify-between items-center glass p-4 rounded-2xl">
-            <div class="text-2xl font-extrabold tracking-tighter">
+            <div class="text-2xl font-extrabold tracking-tighter uppercase">
                 BELDIA<span class="text-blue-500 italic">DIGITAL</span>
             </div>
-            <div class="hidden md:flex gap-10 text-xs uppercase tracking-widest font-semibold">
-                <a href="#about" class="hover:text-blue-400 transition">Stüdyo</a>
+            <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold">
+                <a href="#hero" class="hover:text-blue-400 transition">Ana Sayfa</a>
                 <a href="#apps" class="hover:text-blue-400 transition">Uygulamalar</a>
-                <a href="#services" class="hover:text-blue-400 transition">Neler Yapıyoruz?</a>
-                <a href="#contact" class="bg-blue-600 px-5 py-2 rounded-lg hover:bg-blue-700 transition">İletişim</a>
+                <a href="#tech" class="hover:text-blue-400 transition">Yetenekler</a>
+                <a href="#privacy" class="hover:text-blue-400 transition text-gray-400">Gizlilik</a>
+                <a href="#contact" class="bg-blue-600 px-5 py-2 rounded-lg hover:bg-blue-700 transition text-white">İletişim</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center px-6 pt-20">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center px-6 pt-20">
         <div class="text-center z-10">
-            <h1 data-aos="fade-down" class="text-6xl md:text-9xl font-extrabold mb-6 tracking-tighter">
-                DIGITAL <br> <span class="text-gradient">CRAFTSMANSHIP</span>
+            <h1 data-aos="fade-down" class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tighter">
+                FUTURE <br> <span class="text-gradient">ENGINEERING</span>
             </h1>
-            <p data-aos="fade-up" data-aos-delay="200" class="max-w-xl mx-auto text-gray-400 text-lg md:text-xl mb-10">
-                İsmail Bahadır Arıca tarafından kurulan <b>Beldia Digital</b>, estetik ve performansı birleştiren yeni nesil mobil deneyimler inşa eder.
+            <p data-aos="fade-up" data-aos-delay="200" class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-10">
+                <b>Beldia Digital</b>; Flutter ile mobil, Unity ile oyun ve C/Arduino ile donanım dünyasını birleştiren yenilikçi bir teknoloji stüdyosudur.
             </p>
             <div data-aos="fade-up" data-aos-delay="400" class="flex justify-center gap-6">
-                <a href="#apps" class="w-14 h-14 flex items-center justify-center rounded-full border border-white/20 hover:border-blue-500 transition-all">
-                    <i class="fa-solid fa-arrow-down"></i>
-                </a>
+                <a href="#apps" class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition">Projeleri İncele</a>
+                <a href="mailto:beldiadigital@gmail.com" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition">Bize Yazın</a>
             </div>
         </div>
     </section>
 
-    <section class="py-20 border-y border-white/5 bg-white/5">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-            <div><div class="text-4xl font-bold text-blue-500 mb-2">+3</div><div class="text-xs uppercase text-gray-500">Yayında Olan Uygulama</div></div>
-            <div><div class="text-4xl font-bold text-blue-500 mb-2">99%</div><div class="text-xs uppercase text-gray-500">Crash-Free Rate</div></div>
-            <div><div class="text-4xl font-bold text-blue-500 mb-2">iOS</div><div class="text-xs uppercase text-gray-500">Native Swift Focus</div></div>
-            <div><div class="text-4xl font-bold text-blue-500 mb-2">∞</div><div class="text-xs uppercase text-gray-500">Yaratıcılık</div></div>
+    <section id="tech" class="py-24 bg-zinc-950/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold uppercase tracking-widest mb-4">Teknoloji Odağımız</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div data-aos="zoom-in" class="glass p-8 rounded-3xl text-center card-hover">
+                    <div class="text-blue-500 text-5xl mb-4 font-black">C</div>
+                    <h4 class="font-bold">C Language</h4>
+                    <p class="text-xs text-gray-500 mt-2">Düşük Seviye Programlama & Sistem Mimarisi</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100" class="glass p-8 rounded-3xl text-center card-hover">
+                    <i class="fa-solid fa-microchip text-5xl text-teal-400 mb-4"></i>
+                    <h4 class="font-bold">Arduino</h4>
+                    <p class="text-xs text-gray-500 mt-2">IOT & Robotik Sistem Geliştirme</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="glass p-8 rounded-3xl text-center card-hover">
+                    <i class="fa-solid fa-mobile-screen-button text-5xl text-blue-400 mb-4"></i>
+                    <h4 class="font-bold">Flutter</h4>
+                    <p class="text-xs text-gray-500 mt-2">Multi-Platform Mobil Uygulamalar</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300" class="glass p-8 rounded-3xl text-center card-hover">
+                    <i class="fa-brands fa-unity text-5xl text-white mb-4"></i>
+                    <h4 class="font-bold">Unity</h4>
+                    <p class="text-xs text-gray-500 mt-2">2D/3D Oyun & Simülasyon Geliştirme</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="apps" class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-20 text-center">
-                <h2 class="text-4xl font-bold mb-4">Portfolyo</h2>
-                <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
+            <div class="mb-16">
+                <h2 class="text-4xl font-bold mb-2">Yayınlanan Projeler</h2>
+                <p class="text-gray-500">App Store'da yayında olan mobil deneyimlerimiz.</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div data-aos="fade-right" class="glass p-1 rounded-[2.5rem] card-hover group">
-                    <div class="bg-zinc-900 rounded-[2.4rem] p-8 h-full flex flex-col">
-                        <i class="fa-solid fa-ghost text-4xl text-purple-500 mb-6"></i>
-                        <h3 class="text-2xl font-bold mb-4">Hain Kim?</h3>
-                        <p class="text-gray-400 text-sm mb-8 flex-grow">Parti ve strateji oyunlarının dijitalleşmiş hali. Arkadaş grupları için sosyal bir deneyim.</p>
-                        <a href="https://apps.apple.com/tr/app/hain-kim-impostor-game/id6748138712" target="_blank" class="flex items-center justify-between text-white font-bold group-hover:text-blue-400 transition">
-                            App Store <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-[2rem] card-hover flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4">Hain Kim?</h3>
+                    <p class="text-gray-400 text-sm mb-6 flex-grow">Grup içi etkileşimi artıran strateji ve blöf oyunu.</p>
+                    <a href="https://apps.apple.com/tr/app/hain-kim-impostor-game/id6748138712" target="_blank" class="text-blue-400 font-bold italic">Store Link →</a>
                 </div>
-
-                <div data-aos="fade-up" class="glass p-1 rounded-[2.5rem] card-hover group">
-                    <div class="bg-zinc-900 rounded-[2.4rem] p-8 h-full flex flex-col">
-                        <i class="fa-solid fa-user-ninja text-4xl text-blue-500 mb-6"></i>
-                        <h3 class="text-2xl font-bold mb-4">Gizli Casusu Bul</h3>
-                        <p class="text-gray-400 text-sm mb-8 flex-grow">Gözlem ve soru-cevap yeteneğine dayalı, yüksek etkileşimli mobil oyun.</p>
-                        <a href="https://apps.apple.com/tr/app/gizli-casusu-bul/id6754763277" target="_blank" class="flex items-center justify-between text-white font-bold group-hover:text-blue-400 transition">
-                            App Store <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
+                <div class="glass p-8 rounded-[2rem] card-hover flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4">Gizli Casusu Bul</h3>
+                    <p class="text-gray-400 text-sm mb-6 flex-grow">Dikkat ve sorgulama odaklı parti oyunu.</p>
+                    <a href="https://apps.apple.com/tr/app/gizli-casusu-bul/id6754763277" target="_blank" class="text-blue-400 font-bold italic">Store Link →</a>
                 </div>
-
-                <div data-aos="fade-left" class="glass p-1 rounded-[2.5rem] card-hover group">
-                    <div class="bg-zinc-900 rounded-[2.4rem] p-8 h-full flex flex-col">
-                        <i class="fa-solid fa-book-open text-4xl text-orange-500 mb-6"></i>
-                        <h3 class="text-2xl font-bold mb-4">Kelime Avcısı</h3>
-                        <p class="text-gray-400 text-sm mb-8 flex-grow">Eğitici oyun kategorisinde, zeka ve kelime dağarcığını geliştiren modern arayüz.</p>
-                        <a href="https://apps.apple.com/tr/app/kelime-avc%C4%B1s%C4%B1-%C3%B6%C4%9Fretici-oyun/id6756412997" target="_blank" class="flex items-center justify-between text-white font-bold group-hover:text-blue-400 transition">
-                            App Store <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
+                <div class="glass p-8 rounded-[2rem] card-hover flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4">Kelime Avcısı</h3>
+                    <p class="text-gray-400 text-sm mb-6 flex-grow">Kelime dağarcığını geliştiren eğitici bulmaca.</p>
+                    <a href="https://apps.apple.com/tr/app/kelime-avc%C4%B1s%C4%B1-%C3%B6%C4%9Fretici-oyun/id6756412997" target="_blank" class="text-blue-400 font-bold italic">Store Link →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-32 bg-zinc-950/50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-                <div>
-                    <h2 class="text-5xl font-bold mb-8 leading-tight">Teknolojinin <br> Sınırlarını Zorlayalım</h2>
-                    <p class="text-gray-400 mb-10 text-lg">Beldia Digital olarak sadece kod yazmıyoruz; kullanıcı alışkanlıklarını analiz ediyor ve en akıcı arayüzleri kurguluyoruz.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> SwiftUI & Combine Architecture</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> UI/UX Prototyping (Figma)</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-500"></i> Backend Integration (Firebase/Node.js)</li>
-                    </ul>
+    <section id="privacy" class="py-24 px-6 bg-zinc-950/50">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass p-10 rounded-[2.5rem] border-blue-500/20">
+                <h2 class="text-3xl font-bold mb-8 flex items-center gap-4">
+                    <i class="fa-solid fa-shield-halved text-blue-500"></i> Gizlilik Politikaları
+                </h2>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    Beldia Digital olarak kullanıcı verilerinin güvenliği en büyük önceliğimizdir. Uygulamalarımızın gizlilik politikalarına aşağıdaki linklerden ulaşabilirsiniz:
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-4 bg-white/5 rounded-xl">
+                        <span class="font-semibold text-sm">Hain Kim? - Privacy Policy</span>
+                        <a href="#" class="text-blue-400 text-xs privacy-link uppercase font-bold tracking-tighter">Görüntüle</a>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-white/5 rounded-xl">
+                        <span class="font-semibold text-sm">Gizli Casusu Bul - Privacy Policy</span>
+                        <a href="#" class="text-blue-400 text-xs privacy-link uppercase font-bold tracking-tighter">Görüntüle</a>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-white/5 rounded-xl">
+                        <span class="font-semibold text-sm">Kelime Avcısı - Privacy Policy</span>
+                        <a href="#" class="text-blue-400 text-xs privacy-link uppercase font-bold tracking-tighter">Görüntüle</a>
+                    </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="glass p-8 rounded-3xl text-center"><i class="fa-brands fa-swift text-4xl text-orange-500 mb-4"></i><p class="text-xs">SwiftUI</p></div>
-                    <div class="glass p-8 rounded-3xl text-center mt-8"><i class="fa-solid fa-mobile-screen text-4xl text-blue-500 mb-4"></i><p class="text-xs">iOS Native</p></div>
-                    <div class="glass p-8 rounded-3xl text-center -mt-8"><i class="fa-solid fa-layer-group text-4xl text-purple-500 mb-4"></i><p class="text-xs">Clean Code</p></div>
-                    <div class="glass p-8 rounded-3xl text-center"><i class="fa-solid fa-bolt text-4xl text-yellow-500 mb-4"></i><p class="text-xs">Performance</p></div>
-                </div>
+                <p class="text-[10px] text-gray-600 mt-8 italic text-center">
+                    *Tüm politikalar Apple App Store standartlarına uygun olarak hazırlanmıştır.
+                </p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-32 px-6">
-        <div class="max-w-3xl mx-auto glass rounded-[3rem] p-12 text-center relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-3xl"></div>
-            <h2 class="text-4xl font-bold mb-6">Bir Projen mi Var?</h2>
-            <p class="text-gray-400 mb-10">Beldia Digital ile fikirlerini hayata geçirmek için bize ulaşabilirsin.</p>
-            <a href="mailto:beldiadigital@gmail.com" class="inline-block bg-white text-black px-10 py-5 rounded-2xl font-extrabold hover:scale-105 transition transform duration-300">
-                <i class="fa-solid fa-envelope mr-2"></i> beldiadigital@gmail.com
-            </a>
-            <div class="mt-12 flex justify-center gap-6">
-                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-linkedin-in text-2xl"></i></a>
-                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
-                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-x-twitter text-2xl"></i></a>
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">İletişime Geçin</h2>
+            <p class="text-gray-400 mb-10 text-lg underline underline-offset-8 decoration-blue-500/50">beldiadigital@gmail.com</p>
+            <div class="flex justify-center gap-6">
+                <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full glass hover:bg-blue-600 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full glass hover:bg-blue-600 transition"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-gray-600 text-xs tracking-widest uppercase">
-        <p>© 2026 BELDIA DIGITAL STUDIO - DESIGNED BY IBA</p>
+    <footer class="py-10 text-center text-gray-600 text-[10px] tracking-[0.3em] uppercase">
+        <p>© 2026 BELDIA DIGITAL STUDIO | TECH & DESIGN</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
         
-        // Navbar Scroll Effect
         window.addEventListener('scroll', function() {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) {
-                nav.classList.add('py-4');
-                nav.classList.remove('py-6');
+                nav.classList.add('py-3'); nav.classList.remove('py-6');
             } else {
-                nav.classList.add('py-6');
-                nav.classList.remove('py-4');
+                nav.classList.add('py-6'); nav.classList.remove('py-3');
             }
         });
     </script>
