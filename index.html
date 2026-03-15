@@ -1,126 +1,288 @@
+```html
 <!DOCTYPE html>
 <html lang="tr" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beldia Digital | Future Engineering</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #3b82f6; --bg: #050505; }
-        body { background-color: var(--bg); color: #fff; font-family: 'Sora', sans-serif; overflow-x: hidden; }
-        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%); z-index: -1; pointer-events: none; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .card-hover:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 0 30px rgba(59, 130, 246, 0.1); }
-        
-        /* Modal Stilleri */
-        .modal { display: none; position: fixed; z-index: 200; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); backdrop-filter: blur(10px); }
-        .modal-content { background: #111; margin: 5% auto; padding: 40px; border: 1px solid #333; width: 80%; max-width: 800px; border-radius: 30px; max-height: 80vh; overflow-y: auto; }
-        .policy-text h3 { color: #3b82f6; font-weight: bold; margin-top: 20px; }
-        .policy-text p { color: #aaa; font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beldia Digital | Future Engineering</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root { --primary: #3b82f6; --bg: #050505; }
+
+body {
+background-color: var(--bg);
+color: #fff;
+font-family: 'Sora', sans-serif;
+overflow-x: hidden;
+}
+
+.bg-glow{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: radial-gradient(circle at 50% 50%, rgba(59,130,246,0.05) 0%, transparent 50%);
+z-index:-1;
+pointer-events:none;
+}
+
+.glass{
+background: rgba(255,255,255,0.03);
+backdrop-filter: blur(15px);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.card-hover:hover{
+border-color:var(--primary);
+transform:translateY(-5px);
+box-shadow:0 0 30px rgba(59,130,246,0.1);
+}
+
+.modal{
+display:none;
+position:fixed;
+z-index:200;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+backdrop-filter:blur(10px);
+}
+
+.modal-content{
+background:#111;
+margin:5% auto;
+padding:40px;
+border:1px solid #333;
+width:80%;
+max-width:800px;
+border-radius:30px;
+max-height:80vh;
+overflow-y:auto;
+}
+
+.policy-text h3{
+color:#3b82f6;
+font-weight:bold;
+margin-top:20px;
+}
+
+.policy-text p{
+color:#aaa;
+font-size:14px;
+line-height:1.6;
+margin-bottom:10px;
+}
+
+</style>
 </head>
+
 <body>
-    <div class="bg-glow"></div>
 
-    <nav class="fixed w-full z-[100] px-6 py-6 transition-all" id="navbar">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass p-4 rounded-2xl">
-            <div class="text-xl font-extrabold tracking-tighter uppercase">BELDIA<span class="text-blue-500 italic">DIGITAL</span></div>
-            <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold">
-                <a href="#apps" class="hover:text-blue-400 transition">Projeler</a>
-                <a href="#tech" class="hover:text-blue-400 transition">Yetenekler</a>
-                <a href="#privacy" class="hover:text-blue-400 transition text-blue-500 underline">Gizlilik</a>
-                <a href="mailto:beldiadigital@gmail.com" class="text-white">İletişim</a>
-            </div>
-        </div>
-    </nav>
+<div class="bg-glow"></div>
 
-    <section class="min-h-screen flex items-center justify-center text-center px-6">
-        <div data-aos="fade-up">
-            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tighter">FUTURE <br> <span class="text-blue-500">ENGINEERING</span></h1>
-            <p class="max-w-xl mx-auto text-gray-500 text-lg">Flutter, Unity, C ve Arduino ile dijital ve fiziksel dünyayı birleştiriyoruz.</p>
-        </div>
-    </section>
+<nav class="fixed w-full z-[100] px-6 py-6">
+<div class="max-w-7xl mx-auto flex justify-between items-center glass p-4 rounded-2xl">
 
-    <section id="tech" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="glass p-8 rounded-3xl card-hover"><div class="text-4xl font-black mb-2">C</div><p class="text-[10px] uppercase text-gray-500">Sistem Programlama</p></div>
-            <div class="glass p-8 rounded-3xl card-hover"><i class="fa-solid fa-microchip text-4xl mb-4 text-teal-400"></i><p class="text-[10px] uppercase text-gray-500">Arduino & IOT</p></div>
-            <div class="glass p-8 rounded-3xl card-hover"><i class="fa-solid fa-mobile-screen text-4xl mb-4 text-blue-400"></i><p class="text-[10px] uppercase text-gray-500">Flutter Mobile</p></div>
-            <div class="glass p-8 rounded-3xl card-hover"><i class="fa-brands fa-unity text-4xl mb-4"></i><p class="text-[10px] uppercase text-gray-500">Unity Game Dev</p></div>
-        </div>
-    </section>
+<div class="text-xl font-extrabold tracking-tighter uppercase">
+BELDIA<span class="text-blue-500 italic">DIGITAL</span>
+</div>
 
-    <section id="apps" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12">Projelerimiz</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-            <div class="glass p-8 rounded-3xl">
-                <h3 class="text-xl font-bold mb-4">Hain Kim?</h3>
-                <a href="https://apps.apple.com/tr/app/hain-kim-impostor-game/id6748138712" target="_blank" class="text-blue-400">Store'da Gör →</a>
-            </div>
-            <div class="glass p-8 rounded-3xl">
-                <h3 class="text-xl font-bold mb-4">Gizli Casusu Bul</h3>
-                <a href="https://apps.apple.com/tr/app/gizli-casusu-bul/id6754763277" target="_blank" class="text-blue-400">Store'da Gör →</a>
-            </div>
-            <div class="glass p-8 rounded-3xl">
-                <h3 class="text-xl font-bold mb-4">Kelime Avcısı</h3>
-                <a href="https://apps.apple.com/tr/app/kelime-avc%C4%B1s%C4%B1-%C3%B6%C4%9Fretici-oyun/id6756412997" target="_blank" class="text-blue-400">Store'da Gör →</a>
-            </div>
-        </div>
-    </section>
+<div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold">
 
-    <section id="privacy" class="py-24 px-6 bg-zinc-950/50">
-        <div class="max-w-4xl mx-auto">
-            <div class="glass p-12 rounded-[3rem] border-blue-500/20">
-                <h2 class="text-3xl font-bold mb-8 flex items-center gap-4">
-                    <i class="fa-solid fa-shield-halved text-blue-500"></i> Gizlilik Bildirimleri
-                </h2>
-                <div class="space-y-4">
-                    <button onclick="openModal('hainModal')" class="w-full flex justify-between p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition">
-                        <span>Hain Kim? Gizlilik Politikası</span>
-                        <i class="fa-solid fa-chevron-right text-blue-500"></i>
-                    </button>
-                    <button onclick="openModal('casusModal')" class="w-full flex justify-between p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition">
-                        <span>Gizli Casusu Bul Gizlilik Politikası</span>
-                        <i class="fa-solid fa-chevron-right text-blue-500"></i>
-                    </button>
-                    <button onclick="openModal('kelimeModal')" class="w-full flex justify-between p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition">
-                        <span>Kelime Avcısı Gizlilik Politikası</span>
-                        <i class="fa-solid fa-chevron-right text-blue-500"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+<a href="#apps" class="hover:text-blue-400 transition">Projeler</a>
 
-    <div id="hainModal" class="modal">
-        <div class="modal-content">
-            <div class="flex justify-between mb-8"><h2 class="text-2xl font-bold">Hain Kim? - Gizlilik</h2><button onclick="closeModal('hainModal')">Kapat ✕</button></div>
-            <div class="policy-text">
-                <h3>1. Veri Toplama</h3>
-                <p>Beldia Digital olarak, Hain Kim? uygulaması içinde kişisel olarak tanımlanabilir bilgilerinizi (ad, e-posta, adres vb.) toplamıyoruz. Uygulama "çevrimdışı öncelikli" çalışır.</p>
-                <h3>2. Üçüncü Taraf Hizmetler</h3>
-                <p>Uygulamamız, reklam gösterimi ve performans analizi için Unity Ads veya AdMob gibi sağlayıcılar kullanabilir. Bu sağlayıcılar cihaz kimliği (IDFA/AAID) gibi anonim verileri işleyebilir.</p>
-                <h3>3. Çocukların Gizliliği</h3>
-                <p>Uygulamamız her yaşa uygundur ve çocuklardan bilerek veri toplamaz. Eğer bir verinin toplandığını düşünüyorsanız lütfen bizimle iletişime geçin.</p>
-                <h3>4. İletişim</h3>
-                <p>beldiadigital@gmail.com</p>
-            </div>
-        </div>
-    </div>
+<a href="#tech" class="hover:text-blue-400 transition">Yetenekler</a>
 
-    <footer class="py-16 text-center text-gray-700 text-[10px] tracking-widest uppercase">
-        <p>© 2026 BELDIA DIGITAL | beldiadigital@gmail.com</p>
-    </footer>
+<button onclick="openModal('hainPrivacy')" class="hover:text-blue-400 transition">
+Hain Kim Privacy
+</button>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-        function openModal(id) { document.getElementById(id).style.display = "block"; }
-        function closeModal(id) { document.getElementById(id).style.display = "none"; }
-        window.onclick = function(event) { if (event.target.className === 'modal') { event.target.style.display = "none"; } }
-    </script>
+<button onclick="openModal('hainTerms')" class="hover:text-blue-400 transition">
+Hain Kim Terms
+</button>
+
+<a href="mailto:beldiadigital@gmail.com">İletişim</a>
+
+</div>
+
+</div>
+</nav>
+
+
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+
+<div data-aos="fade-up">
+
+<h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tighter">
+FUTURE <br>
+<span class="text-blue-500">ENGINEERING</span>
+</h1>
+
+<p class="max-w-xl mx-auto text-gray-500 text-lg">
+Flutter, Unity, C ve Arduino ile dijital ve fiziksel dünyayı birleştiriyoruz.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="tech" class="py-24 px-6 max-w-7xl mx-auto">
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+<div class="glass p-8 rounded-3xl card-hover">
+<div class="text-4xl font-black mb-2">C</div>
+<p class="text-[10px] uppercase text-gray-500">Sistem Programlama</p>
+</div>
+
+<div class="glass p-8 rounded-3xl card-hover">
+<i class="fa-solid fa-microchip text-4xl mb-4 text-teal-400"></i>
+<p class="text-[10px] uppercase text-gray-500">Arduino & IOT</p>
+</div>
+
+<div class="glass p-8 rounded-3xl card-hover">
+<i class="fa-solid fa-mobile-screen text-4xl mb-4 text-blue-400"></i>
+<p class="text-[10px] uppercase text-gray-500">Flutter Mobile</p>
+</div>
+
+<div class="glass p-8 rounded-3xl card-hover">
+<i class="fa-brands fa-unity text-4xl mb-4"></i>
+<p class="text-[10px] uppercase text-gray-500">Unity Game Dev</p>
+</div>
+
+</div>
+</section>
+
+
+<section id="apps" class="py-24 px-6 max-w-7xl mx-auto">
+
+<h2 class="text-3xl font-bold mb-12">Projelerimiz</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+
+<div class="glass p-8 rounded-3xl">
+<h3 class="text-xl font-bold mb-4">Hain Kim?</h3>
+<a href="https://apps.apple.com/tr/app/hain-kim-impostor-game/id6748138712" target="_blank" class="text-blue-400">
+Store'da Gör →
+</a>
+</div>
+
+<div class="glass p-8 rounded-3xl">
+<h3 class="text-xl font-bold mb-4">Gizli Casusu Bul</h3>
+<a href="https://apps.apple.com/tr/app/gizli-casusu-bul/id6754763277" target="_blank" class="text-blue-400">
+Store'da Gör →
+</a>
+</div>
+
+<div class="glass p-8 rounded-3xl">
+<h3 class="text-xl font-bold mb-4">Kelime Avcısı</h3>
+<a href="https://apps.apple.com/tr/app/kelime-avc%C4%B1s%C4%B1-%C3%B6%C4%9Fretici-oyun/id6756412997" target="_blank" class="text-blue-400">
+Store'da Gör →
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<div id="hainPrivacy" class="modal">
+
+<div class="modal-content">
+
+<div class="flex justify-between mb-8">
+<h2 class="text-2xl font-bold">Hain Kim? - Privacy Policy</h2>
+<button onclick="closeModal('hainPrivacy')">Kapat ✕</button>
+</div>
+
+<div class="policy-text">
+
+<h3>1. Veri Toplama</h3>
+<p>Hain Kim? uygulaması kullanıcıdan isim, email veya kişisel veri toplamaz.</p>
+
+<h3>2. Üçüncü Taraf Servisler</h3>
+<p>Uygulama reklam göstermek için Unity Ads veya Google AdMob kullanabilir.</p>
+
+<h3>3. Çocukların Gizliliği</h3>
+<p>Uygulama çocuklardan bilerek veri toplamaz.</p>
+
+<h3>4. İletişim</h3>
+<p>beldiadigital@gmail.com</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div id="hainTerms" class="modal">
+
+<div class="modal-content">
+
+<div class="flex justify-between mb-8">
+<h2 class="text-2xl font-bold">Hain Kim? - Terms of Use</h2>
+<button onclick="closeModal('hainTerms')">Kapat ✕</button>
+</div>
+
+<div class="policy-text">
+
+<h3>1. Kullanım</h3>
+<p>Hain Kim? oyunu eğlence amaçlı sunulmaktadır.</p>
+
+<h3>2. Telif Hakları</h3>
+<p>Tüm içerik Beldia Digital'e aittir.</p>
+
+<h3>3. Sorumluluk</h3>
+<p>Uygulamanın yanlış kullanımından geliştirici sorumlu değildir.</p>
+
+<h3>4. Güncellemeler</h3>
+<p>Bu şartlar zaman zaman güncellenebilir.</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<footer class="py-16 text-center text-gray-700 text-[10px] tracking-widest uppercase">
+<p>© 2026 BELDIA DIGITAL | beldiadigital@gmail.com</p>
+</footer>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+
+AOS.init({ duration:1000, once:true });
+
+function openModal(id){
+document.getElementById(id).style.display="block";
+}
+
+function closeModal(id){
+document.getElementById(id).style.display="none";
+}
+
+window.onclick=function(event){
+if(event.target.className==='modal'){
+event.target.style.display="none";
+}
+}
+
+</script>
+
 </body>
 </html>
+```
